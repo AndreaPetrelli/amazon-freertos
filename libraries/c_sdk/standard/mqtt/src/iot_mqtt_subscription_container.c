@@ -133,12 +133,12 @@ static bool _topicMatch( _mqttSubscription_t * pSubscription,
     const uint16_t topicFilterLength = pSubscription->topicFilterLength;
 
     /* Check for an exact match. */
-    if( topicNameLength == topicFilterLength )
-    {
-        status = ( strncmp( pTopicName, pTopicFilter, topicNameLength ) == 0 );
+    // if( topicNameLength == topicFilterLength )
+    // {
+    //     status = ( strncmp( pTopicName, pTopicFilter, topicNameLength ) == 0 );
 
-        IOT_GOTO_CLEANUP();
-    }
+    //     IOT_GOTO_CLEANUP();
+    // }
 
     /* If the topic lengths are different but an exact match is required, return
      * false. */
