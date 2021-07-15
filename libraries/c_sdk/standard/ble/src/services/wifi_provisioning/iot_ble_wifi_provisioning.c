@@ -1157,7 +1157,7 @@ WIFIReturnCode_t _popNetwork( uint16_t index,
         ret = WIFI_NetworkDelete( STORAGE_INDEX( index ) );
     }
 
-    if( ( ret == eWiFiSuccess ) && ( wifiProvisioning.numNetworks > 0 ) )
+    if( ret == eWiFiSuccess )
     {
         wifiProvisioning.numNetworks--;
 
