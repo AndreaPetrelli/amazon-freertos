@@ -843,8 +843,6 @@ void _IotMqtt_ProcessKeepAlive( IotTaskPool_t pTaskPool,
         EMPTY_ELSE_MARKER;
     }
 
-    IotMutex_Unlock( &( pMqttConnection->referencesMutex ) );
-
     /* Close the connection on failures. */
     if( status == false )
     {
@@ -858,6 +856,8 @@ void _IotMqtt_ProcessKeepAlive( IotTaskPool_t pTaskPool,
     {
         EMPTY_ELSE_MARKER;
     }
+
+    IotMutex_Unlock( &( pMqttConnection->referencesMutex ) );
 }
 
 /*-----------------------------------------------------------*/
